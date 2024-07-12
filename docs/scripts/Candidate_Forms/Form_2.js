@@ -1,3 +1,5 @@
+import { DATA_SERVER_URI } from "../config/config.js";
+
 const form2 = {
     async onLoad(activeUser) {
         if(activeUser.log.form2.form == true) {
@@ -9,7 +11,7 @@ const form2 = {
             FormResetBtn[0].disabled = true;
 
             try {
-                await axios.get(`http://localhost:7777/candidate/addressdetails/${activeUser.uid}`).then((resp) => {
+                await axios.get(`${DATA_SERVER_URI}/candidate/addressdetails/${activeUser.uid}`).then((resp) => {
                 console.log("Candidate Address Details Extracted", resp.data);
                     
                     for(let i = 0; i < FormData.elements.length; i++) {
@@ -95,7 +97,7 @@ const form2 = {
         
         // console.log("AV Data",AV_Data);
         try {
-            const resp = await axios.post("http://localhost:7777/candidate/addressdetails", AV_Data)
+            const resp = await axios.post(`${DATA_SERVER_URI}/candidate/addressdetails`, AV_Data)
             console.log(resp.data);
             activeUser.log.form2.form = true;
             return true;

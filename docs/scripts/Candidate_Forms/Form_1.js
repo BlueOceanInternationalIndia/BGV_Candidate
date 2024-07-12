@@ -1,3 +1,5 @@
+import { DATA_SERVER_URI } from "../config/config.js";
+
 const form1 = {
     async onLoad(activeUser) {
         // console.log(activeUser.log.form0);
@@ -10,7 +12,7 @@ const form1 = {
             FormResetBtn.disabled = true;
 
             try {
-                await axios.get(`http://localhost:7777/candidate/personaldetails/${activeUser.uid}`).then((resp) => {
+                await axios.get(`${DATA_SERVER_URI}/candidate/personaldetails/${activeUser.uid}`).then((resp) => {
                 console.log("Candidate Personal Details Extracted", resp.data);
                     
                     for(let i = 0; i < FormData.elements.length; i++) {
@@ -71,7 +73,7 @@ const form1 = {
         formData.append("File", FormFileData);
 
         try {
-            const resp = await axios.post("http://localhost:7777/candidate/files/upload", formData)
+            const resp = await axios.post(`${DATA_SERVER_URI}/candidate/files/upload`, formData)
             console.log("File Upload Success", resp.data);
             activeUser.log.form1.file1 = true;
             return resp.data.success
@@ -107,7 +109,7 @@ const form1 = {
         
         // console.log("PD Data",PD_Data);
         try {
-            const resp = await axios.post("http://localhost:7777/candidate/personaldetails", PD_Data)
+            const resp = await axios.post(`${DATA_SERVER_URI}/candidate/personaldetails`, PD_Data)
             console.log(resp.data);
             activeUser.log.form1.form = true;
             return true;

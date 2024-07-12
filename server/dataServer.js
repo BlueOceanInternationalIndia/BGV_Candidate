@@ -5,7 +5,7 @@ import userRoutes from './routes/user_Routes.js';
 import connectDB from './config/database.js';
 import { allowedOrigins } from './config/config.js';
 
-const PORT = process.env.MAIN_SERVER_PORT;
+const PORT = process.env.PORT || process.env.MAIN_SERVER_PORT;
 const mongoDB_URI = process.env.MAIN_DB_URI;
 const app = express();
 

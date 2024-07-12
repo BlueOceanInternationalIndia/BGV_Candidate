@@ -6,7 +6,7 @@ const activeUser = {
         name: null
     }
 
-// console.log("ActiveUser => ", activeUser);
+console.log("ActiveUser => ", activeUser);
 
 window.addEventListener('load', async () => {
     const validUser = await userServices.loginValidate();

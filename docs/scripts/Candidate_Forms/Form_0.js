@@ -1,4 +1,4 @@
-import onClick from "../services/onClick_Services.js";
+import { DATA_SERVER_URI } from "../config/config.js";
 
 const form0 = {
     async onLoad(activeUser) {
@@ -25,7 +25,7 @@ const form0 = {
         // console.log(consentData);
 
         try {
-            const resp = await axios.post("http://localhost:7777/candidate/consent", consentData)
+            const resp = await axios.post(`${DATA_SERVER_URI}/candidate/consent`, consentData)
             activeUser.log.form0.form = true;
             return true;
         } catch (err) {

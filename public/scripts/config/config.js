@@ -1,1 +1,0 @@
-export const MAX_File_SIZE_MB = 2;

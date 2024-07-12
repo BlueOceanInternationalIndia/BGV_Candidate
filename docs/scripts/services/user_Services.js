@@ -1,11 +1,13 @@
 import getCookie from "./cookieGrab_Service.js";
+import { DATA_SERVER_URI } from "../config/config.js";
+import { AUTH_SERVER_URI } from "../config/config.js";
 
 
 const userServices = {
     async getLog(user) {
         // console.log("BBB", user);
         try {
-            const resp = await axios.get(`http://localhost:7777/candidate/log/${user.uid}`);
+            const resp = await axios.get(`${DATA_SERVER_URI}/candidate/log/${user.uid}`);
             if(resp.data.log == null) console.log('User Does Not Exist');
             else console.log('Log Retrieved');
             return resp.data.log;
@@ -30,7 +32,7 @@ const userServices = {
         // console.log(loginData);
 
         try {
-            const resp = await axios.post(`http://localhost:5555/login/auth`, loginData, {withCredentials: true});
+            const resp = await axios.post(`${AUTH_SERVER_URI}/login/auth`, loginData, {withCredentials: true});
             if(resp.data.auth == true) {
                 console.log("Login Success");
                 form.reset();
@@ -55,7 +57,7 @@ const userServices = {
                     auth: `Bearer ${rTa}`
                 };
     
-            const resp = await axios.post(`http://localhost:5555/login/logout`, session, {withCredentials: true});
+            const resp = await axios.post(`${AUTH_SERVER_URI}/login/logout`, session, {withCredentials: true});
             if(resp.data.auth == false) {
                 console.log('User Logged Out');
                 window.location.href = '../index.html'
@@ -88,7 +90,7 @@ const userServices = {
                     auth: `Bearer ${rTa}`
                 }
 
-                const resp = await axios.post(`http://localhost:5555/login/valid`, auth);
+                const resp = await axios.post(`${AUTH_SERVER_URI}/login/valid`, auth);
                 if(resp.data.auth == true) {
                     returnObj.auth = true;
                     returnObj.user.uid = resp.data.user.uid;
