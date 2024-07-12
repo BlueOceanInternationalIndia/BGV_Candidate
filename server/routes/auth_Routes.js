@@ -81,12 +81,14 @@ router.post('/auth', async (req, res) => {
 
         res.cookie('aTr', accessToken, {
             secure: true,
-            httpOnly: false, 
+            httpOnly: false,
+            sameSite: "none", 
             expires: new Date(Date.now() + (aTr_Exp_Min * 60000))
         });
         res.cookie('rTa', refreshToken, {
             secure: true,
             httpOnly: false, 
+            sameSite: "none",
             expires: new Date(Date.now() + (rTa_Exp_Hrs * 3600000))
         });
 
