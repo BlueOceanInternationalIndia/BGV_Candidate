@@ -81,6 +81,7 @@ const userServices = {
                 name: null
             }
         }
+        console.log('Cookie', rTa)
 
         if(rTa == null) {
             return returnObj;
