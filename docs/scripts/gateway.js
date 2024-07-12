@@ -10,7 +10,7 @@ console.log("ActiveUser => ", activeUser);
 
 window.addEventListener('load', async () => {
     const validUser = await userServices.loginValidate();
-    // console.log("Valid User", validUser);
+    console.log("Valid User", validUser);
 
     activeUser.uid = validUser.user.uid;
     activeUser.id = validUser.user.id;
