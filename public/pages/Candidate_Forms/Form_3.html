@@ -1,0 +1,177 @@
+<div id="IdentityVerification" class="candidateForms">
+    <div class="wrapper">
+        <form action="https://script.google.com/macros/s/AKfycbzRAQS_-wj5ol0a5uUxqa0_UTiiCqWyZnPfJ7GkyPc/dev" id="Form2" method="post">
+            <div class="wrapper">
+                <!-- action will be set by JS -->
+                <div class="form_Comp">
+                    <div class="wrapper">
+                        <ul>
+                            <li>
+                                <div class="wrapper">
+                                    <h2>Identity Verification</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrapper">
+                                    <p>All fields are mandatory.<br>OTP will be required to complete this step</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <!-- <br>
+                    <br>
+                    <label for="IdentityVerification_ImageInfo">Candidate Image</label>
+                    <hr>
+                    <li id="IdentityVerification_AadhaarInfo" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_ImageInfo_Image">Upload your Image</label>
+                                        <input type="file" id="IdentityVerification_ImageInfo_Image" name="Candidate Image" placeholder="" value="" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <button>Upload</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+
+                    <br>
+                    <br>
+                    <label for="IdentityVerification_AadhaarInfo">Aadhaar Details</label>
+                    <hr>
+                    <li id="IdentityVerification_AadhaarInfo" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_AadhaarInfo_AadharID">Aadhaar Number</label>
+                                        <input type="text" id="IdentityVerification_AadhaarInfo_AadharID" name="Aadhar_ID" placeholder="Enter your Aadhar ID Number" value="" required>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="IdentityVerification_AadhaarVerification" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_AadhaarVerification_Mobile">Mobile Number linked with Adhaar</label>
+                                        <div id="IdentityVerification_AadhaarVerification_Mobile" class="contactNumberInput">
+                                            <select id="IdentityVerification_AadhaarVerification_MobileCode" class="mobileCountryCodes" name="Aadhar_Number_Code">
+                                                <option data-countryCode="IN" value="91"> IN (+91).</option>
+                                            </select>
+                                            <input type="text" id="IdentityVerification_AadhaarVerification_MobileNumber" name="Aadhar_Number" placeholder="Enter Mobile Number" value="" required>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <button>Send OTP</button>
+                                    </div>
+                                </li>
+                            </ul>                        
+                        </div>
+                    </li>
+                    <li id="IdentityVerification_AadhaarConfirm" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_AadhaarConfirm_OTP">OTP</label>
+                                        <input type="text" id="IdentityVerification_AadhaarConfirm_OTP" name="Aadhar_OTP" placeholder="Enter OTP received" value="" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <button>Verify OTP</button>
+                                    </div>
+                                </li>
+                            </ul>                        
+                        </div>
+                    </li>
+
+                    <br>
+                    <br>
+                    <label for="IdentityVerification_PANInfo">PAN Details</label>
+                    <hr>
+                    <li id="IdentityVerification_PANInfo" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_PANInfo_PANID">PAN Number</label>
+                                        <input type="text" id="IdentityVerification_PANInfo_PANID" name="PAN_ID" placeholder="Enter your PAN ID Number" value="" required>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="IdentityVerification_PANVerification" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_PANVerification_Mobile">Mobile Number linked with PAN</label>
+                                        <div id="IdentityVerification_PANVerification_Mobile" class="contactNumberInput">
+                                            <select id="IdentityVerification_PANVerification_MobileCode" class="mobileCountryCodes" name="PAN_Number_Code">
+                                                <option data-countryCode="IN" value="91"> IN (+91).</option>
+                                            </select>
+                                            <input type="text" id="IdentityVerification_PANVerification_MobileNumber" name="PAN_Number" placeholder="Enter Mobile Number" value="" required>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <li>
+                                    <div class="wrapper">
+                                        <button>Send OTP</button>
+                                    </div>
+                                </li> -->
+                            </ul>                        
+                        </div>
+                    </li>
+                    <!-- <li id="IdentityVerification_PANConfirm" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_PANConfirm_OTP">OTP</label>
+                                        <input type="text" id="IdentityVerification_PANConfirm_OTP" name="PAN OTP" placeholder="Enter OTP received" value="" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <button>Verify OTP</button>
+                                    </div>
+                                </li>
+                            </ul>                        
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="form_Comp">
+                    <div class="wrapper">
+                        <ul>
+                            <li>
+                                <div class="wrapper">
+                                    <button type="submit" id="Form2_Submit">Submit</button>
+                                    <button type="reset">Reset</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+       
+<!-- <script src="../Sketches/Form_1.js"></script> -->
+<!-- <script src="https://apis.google.com/js/api.js"></script> -->
+
+

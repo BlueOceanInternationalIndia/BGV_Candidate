@@ -1,0 +1,452 @@
+:root {
+    /*---------------- Top Bar -----------------*/
+    --topBar_Height: 65px;
+    --topBarMenu_Color: white;
+    --topBarMenu_Width: 0;
+
+
+    /*--------------- Main Space ---------------*/
+    --navigationBar_Position: relative;
+    --navigationBar_Width: 300px;
+
+    /*----------------- Form 1 -----------------*/
+    --ConsentForm_Comp_FlexDir: row;
+  }
+
+/* Media query needs to be placed below the property it is supposed to update otherwise no effect will be visible */
+@media only screen and (min-width: 200px) and (max-width: 860px)  {
+    :root {
+        --sideNav_position: absolute;
+        --sideNav_Width: 0px;
+        --SideNav_Button_width: 50px;
+        --contactNumberInput_Width: 100%;
+
+        /*---------------- Top Bar -----------------*/
+        --topBarMenu_Width: 60px;
+        
+        
+        /*--------------- Main Space ---------------*/
+        --navigationBar_Position: absolute;
+        --navigationBar_Width: 0px;
+
+        /*----------------- Form 1 -----------------*/
+        --ConsentForm_Comp_FlexDir: column;
+    }
+}
+
+/*----------------------------- Top Bar ----------------------------*/
+#TopBar {
+    position: relative;
+    display: flex;
+        height: var(--topBar_Height);
+        width: 100%;
+    place-content: center;
+    box-shadow: 0px 0px 5px var(--palette1_Color1);
+    background-color: var(--Color1);
+    isolation: isolate;
+    z-index: 100;
+}
+
+#TopBar > .wrapper > ul {
+    grid-template-columns: auto 10fr auto auto;
+    grid-template-rows: 1fr;
+}
+
+#TopBar > .wrapper > ul > li:nth-child(2) > .wrapper > h1 {
+    display: grid;
+        height: auto;
+        width: 98%;
+    color: var(--Color5);
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    /* background-color: red; */
+}
+
+#TopBar_Profile {
+    height: 90%;
+    width: 60px;
+    margin: 0 0 0 10%;
+    /* background-color: black; */
+}
+
+#TopBar_Profile > .wrapper > img {
+    border-radius: 100%;
+}
+
+#TopBar_Profile:hover {
+    background-color: var(--palette2_Color3);
+}
+
+#TopBar_Menu {
+    display: grid;
+        height: 100%;
+        width: var(--topBarMenu_Width);
+    place-items: center;
+    margin-right: 10px;
+    /* background-color: lightpink; */
+    overflow: hidden;
+}
+
+#TopBar_Menu > .wrapper {
+        width: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* background-color: transparent; */
+    
+}
+
+#TopBar_Menu > .wrapper > span {
+        height: 4px;
+        width: 30px;
+    border-radius: 50px;
+    background-color: var(--Color2);
+    opacity: 50%;
+    transition: transform .1s linear;
+}
+
+#TopBar_Menu[data-status = "active"] > .wrapper > span:nth-child(2) {
+    transform: translate(0, 175%) rotate(45deg);
+}
+#TopBar_Menu[data-status = "active"] > .wrapper > span:nth-child(3) {
+    visibility: hidden;
+}
+#TopBar_Menu[data-status = "active"] > .wrapper > span:nth-child(4) {
+    transform: translate(0, -175%) rotate(-45deg);
+}
+
+#TopBar_ProfileMenu {
+    position: absolute;
+    display: grid;
+        height: 0;
+        width: 200px;
+        top: 67px;
+        right: 0;
+    transition: height .25s linear;
+    box-shadow: 0px 0px 2px var(--palette1_Color1);
+    background-color: var(--palette2_Color3);
+    /* background-image: linear-gradient(to left, var(--palette1_Color1), var(--palette1_Color2)); */
+    color: var(--Color2);
+
+}
+
+#TopBar_ProfileMenu[data-status = "active"] {
+        height: 150px;
+}
+
+#TopBar_ProfileMenu > .wrapper > ul > li{
+        height: 50px;
+        width: 100%;
+        border: 1px solid var(--Color3);
+}
+
+#TopBar_ProfileMenu > .wrapper > ul > li:hover{
+    background-color: var(--palette1_Color2);
+    color: var(--Color1);
+}
+
+
+/*--------------------------- Main Space ---------------------------*/
+#MainSpace {
+    display: grid;
+        height: 100%;
+        width: 100%;
+        grid-column: 1;
+        grid-row: 2;
+    place-items: center;
+    /* background-color: blue; */
+}
+
+#MainSpace > .wrapper > ul {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+/*////////////------- Navigation Bar --------////////////*/
+#NavigationBar {
+    position: var(--navigationBar_Position);
+    display: grid;
+        height: 100%;
+        width: var(--navigationBar_Width);
+        top: 0;
+        left: 0;
+        grid-column: 1;
+        grid-row: 1;
+    place-items: center;
+    transition: width .15s linear;
+    background-image: linear-gradient(to right, var(--palette1_Color1), var(--palette1_Color2));
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#NavigationBar[data-status = "active"] {
+    width: 300px!important;
+}
+
+#NavigationBar[data-status = "inactive"] {
+    width: 0px!important;
+}
+
+#NavigationBar > .wrapper {
+    position: absolute;
+    display: grid;
+        width: 300px;
+        top: 0;
+        left: 0;
+}
+
+#NavigationBar > .wrapper > ul {
+    width: 290px;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 2fr 5fr;
+}
+
+.navigationBar_Comp {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /* background-color: antiquewhite; */
+}
+
+.navigationBar_Comp:nth-child(1) > .wrapper > h1{
+    display: grid;
+    height: 100%;
+    align-items: end;
+    font-size: 1.5rem;
+}
+
+.navigationBar_Comp:nth-child(2) img{
+    border-radius: 100%;
+}
+
+.navigationBar_Comp:nth-child(3) > .wrapper > ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.navigationBar_Comp:nth-child(3) > .wrapper > ul > li > .wrapper{
+    display: grid;
+        width: 90%;
+    justify-content: left;
+    /* background-color: #D7A31A; */
+}
+
+.navigationBar_Tab {
+    /* border: 1px solid rgba(99, 99, 158, 0.767); */
+    border-left: 5px solid var(--palette1_Color1);    
+}
+
+.navigationBar_Tab:hover {
+    background-color: var(--palette1_Color2);
+    border-left: 5px solid var(--Color1);    
+}
+
+.navigationBar_Tab[data-status="active"] {
+    background-color: var(--palette1_Color2);
+    border-left: 5px solid var(--Color1);
+}
+
+.navigationBar_Tab[data-enabled="false"] {
+    color: var(--palette1_Color2);
+}
+
+
+/*////////////--------- Form Space ----------////////////*/
+#FormSpace {
+    display: grid;
+        height: 100%;
+        width: 100%;
+        grid-column: 2;
+        grid-row: 1;
+    place-items: center;
+    background-color: var(--Color3);
+}
+
+#FormSpace > .wrapper > ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr .5fr;
+}
+
+.formSpace_Comp:nth-child(1) {
+    display: grid;
+        height: 100%;
+        width: 95%;
+    justify-content: left;
+    /* background-color: red; */
+    color: var(--Color2);
+} 
+
+#formSpace_Heading {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 40%;
+    
+}
+
+.formSpace_Comp:nth-child(2) {
+    display: grid;
+        height: 99%;
+        width: 95%;
+    align-self: start;
+    box-shadow: 0px 0px 2px var(--palette1_Color1);
+    background-color: var(--Color1);
+} 
+
+.formSpace_Comp:nth-child(3) {
+    height: 50px;
+    text-align: top;
+    /* font-size: 0.85rem; */
+} 
+
+#CandidateFormSpace {
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+    /* background-color: blue; */
+}
+
+#FormSpace_Footer > .wrapper> ul{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.75rem;
+    color: var(--Color2);
+    opacity: 50%;
+}
+
+#FormSpace_Footer > .wrapper> ul > li:first-child{
+    justify-content: left;
+}
+
+#FormSpace_Footer > .wrapper> ul > li:last-child{
+    text-decoration: none;
+    justify-content: right;
+}
+
+
+.radioButton {
+    width: 100%;
+    /* background-color: red; */
+}
+
+.radioButton > ul, .radioButton > ul > li > .wrapper {
+    display: flex;
+}
+
+.radioButton > ul > li {
+    width: max-content;
+}
+
+.radioButton > ul > li > .wrapper > label{
+    padding: 0 5px 0 2px;
+}
+
+.candidateForms {
+    /* position: relative; */
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+    /* background-color: #D7A31A; */
+}
+
+.candidateForms > .wrapper {
+    position: relative;
+        height: 95%;
+    overflow-y: scroll!important;
+    /* background-color: #4191F9; */
+}
+
+.candidateForms > .wrapper > form {
+    position: absolute;
+    display: grid;
+        min-height: calc(100% - 45px);
+        height: auto;
+        width: 90%;
+        top: 0;
+        left: auto;
+    place-items: center;
+}
+
+.candidateForms > .wrapper > form > .wrapper > * {
+    min-height: 100px;
+    font-size: 1rem;
+    font-weight: 400;
+    overflow: visible;
+    color: var(--Color6);
+    /* background-color: aqua; */
+}
+
+.form_Comp:first-child {
+    display: grid;
+        height: 100%;
+        width: 100%;
+    justify-content: left;
+    /* background-color: red; */
+}
+
+.form_Comp:first-child > .wrapper > ul > li > .wrapper > h2 {
+    align-self: end;
+    justify-self: left;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.form_Comp:first-child > .wrapper > ul > li > .wrapper > p {
+    align-self: start;
+    justify-self: left;
+    font-size: .75rem;
+}
+
+.form_Subcomp > .wrapper > ul {
+    display: flex!important;
+        height: max-content;
+    flex-direction: var(--ConsentForm_Comp_FlexDir);
+}
+
+.form_Subcomp > .wrapper > ul > li {
+    margin: 10px;
+}
+
+.form_Subcomp > .wrapper > ul > li > .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr 1fr;
+    justify-items: start;
+    overflow: visible;
+}
+
+.form_Subcomp label {
+    display: flex;
+        height: 100%;
+        width: 100%;
+    align-items: flex-end;
+    margin-bottom: 5px;
+    text-wrap: wrap;
+}
+
+
+.form_Comp:last-child {
+    display: grid;
+    width: 100%;
+    margin-top: auto;
+}
+
+.form_Comp:last-child > .wrapper > ul > li > .wrapper {
+    display: flex;
+}
+
+.form_Comp:last-child > .wrapper > ul > li > .wrapper > button {
+        height: 40px;
+        width: 100px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Form 5 */
+
+#AddressVerification_Current > .wrapper > ul > li label{
+    padding-left: 5px;
+}

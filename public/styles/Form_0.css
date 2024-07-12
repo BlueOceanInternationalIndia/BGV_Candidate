@@ -1,0 +1,28 @@
+#ConsentForm > .wrapper > form > ul {
+    /* grid-template-columns: 1fr; */
+    /* grid-template-rows: 1fr auto ; */
+    background-color: aquamarine;
+}
+
+#ConsentForm_Text >.wrapper > p {
+    text-align: justify;
+}
+
+#ConsentForm_Comp_Buttons > .wrapper {
+    display: grid;
+    grid-template-columns: .1fr 5fr 1fr;
+    grid-template-rows: 1fr;
+    /* background-color: aqua; */
+}
+
+#ConsentForm_Comp_Buttons > .wrapper > input{
+    align-self: center;
+    justify-self: right;
+    margin-right: 10px;
+    /* background-color: aqua; */
+}
+
+#ConsentForm_Comp_Buttons > .wrapper > label{
+    font-size: .85rem;
+    /* background-color: aqua; */
+}

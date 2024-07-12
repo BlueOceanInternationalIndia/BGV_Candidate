@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+    position: relative;
+    display: grid;
+        height: 100vh;                  /* Backup Height */
+        height: 100svh;                 /* Main Height in small view port units */ 
+        width: auto;
+    overflow: hidden;
+}
+
+iframe {
+    position: absolute;
+    display: grid;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+}

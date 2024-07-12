@@ -1,0 +1,301 @@
+<div id="PersonalDetails" class="candidateForms">
+    <div class="wrapper">
+        <form id="Form1" data-form="1">
+            <div class="wrapper">
+                <!-- action will be set by JS -->
+                <div class="form_Comp">
+                    <div class="wrapper">
+                        <ul>
+                            <li>
+                                <div class="wrapper">
+                                    <h2>Personal Details</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrapper">
+                                    <p>All fields are mandatory</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <li id="PersonalDetails_NameData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_NameData_FullName">Full Name</label>
+                                        <input type="text" id="PersonalDetails_NameData_FullName" name="Full_Name" placeholder="Enter Your Name" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_NameData_FatherName">Father's Name</label>
+                                        <input type="text" id="PersonalDetails_NameData_FatherName" name="Father_Name" placeholder="Enter Father's Name" value="" required>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="PersonalDetails_NameData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_NameData_MotherName">Mother's Name</label>
+                                        <input type="text" id="PersonalDetails_NameData_MotherName" name="Mother_Name" placeholder="Enter Mother's Name" value="" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_NameData_SpouseName">Spouse's Name</label>
+                                        <input type="text" id="PersonalDetails_NameData_SpouseName" name="Spouse_Name" placeholder="Enter Spouse's Name" value="" required>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="PersonalDetails_BasicData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_BasicData_Gender">Gender</label>
+                                        <div id="PersonalDetails_BasicData_Gender" class="radioButton">
+                                            <ul>
+                                                <li>
+                                                    <div class="wrapper">
+                                                        <input type="radio" id="PersonalDetails_BasicData_Gender_Male" name="Gender" placeholder="" value="Male" required><label for="PersonalDetails_BasicData_Gender_Male">Male</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrapper">
+                                                        <input type="radio" id="PersonalDetails_BasicData_Gender_Female" name="Gender" placeholder="" value="Female" required><label for="PersonalDetails_BasicData_Gender_Female">Female</label>                                                        
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrapper">
+                                                        <input type="radio" id="PersonalDetails_BasicData_Gender_Other" name="Gender" placeholder="" value="Others" required><label for="PersonalDetails_BasicData_Gender_Others">Others</label>                                                        
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_BasicData_DOB">Date Of Birth</label>
+                                        <input type="date" id="PersonalDetails_BasicData_DOB" name="DOB" value=2000-01-01 required>
+                                    </div>
+                                </li>
+                            </ul>                        
+                        </div>
+                    </li>
+                    <li id="PersonalDetails_ContactData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_ContactData_Contact">Contact Number</label>
+                                        <div id="PersonalDetails_ContactData_Contact" class="contactNumberInput">
+                                            <select id="PersonalDetails_ContactData_MobileCode" class="mobileCountryCodes" name="Contact_Code">
+                                                <option data-countryCode="IN" value="91"> IN (+91).</option>
+                                            </select>
+                                            <input type="tel" id="PersonalDetails_ContactData_MobileNumber" name="Contact" placeholder="Enter Contact Number" value="" required>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_ContactData_Whatsapp">Whatsapp Number</label>
+                                        <div id="PersonalDetails_ContactData_Whatsapp" class="contactNumberInput">
+                                            <select id="PersonalDetails_ContactData_WhatsappCode" class="mobileCountryCodes" name="Whatsapp_Code">
+                                                <option data-countryCode="IN" value="91"> IN (+91).</option>
+                                            </select>
+                                            <input type="tel" id="PersonalDetails_ContactData_WhatsappNumber" name="Whatsapp" placeholder="Enter Whatsapp Number" value="" required>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="PersonalDetails_EmailData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_EmailData_Email">Email</label>
+                                        <input type="email" id="PersonalDetails_EmailData_Email" name="Email" placeholder="Enter Email ID" value="" required>            
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_EmailData_AltEmail">Alternate Email</label>
+                                        <input type="email" id="PersonalDetails_EmailData_AltEmail" name="Alt_Email" placeholder="Enter Alternate Email ID" value="" required>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="PersonalDetails_ResidenceData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_ResidenceData_State">State/UT of Residence</label>
+                                        <select name="State" id="PersonalDetails_ResidenceData_State">
+                                            <option value="None">Select</option>
+                                            <option value="AP">Andhra Pradesh</option>
+                                            <option value="AR">Arunachal Pradesh</option>
+                                            <option value="AS">Assam</option>
+                                            <option value="BR">Bihar</option>
+                                            <option value="CT">Chhattisgarh</option>
+                                            <option value="GA">Gujarat</option>
+                                            <option value="HR">Haryana</option>
+                                            <option value="HP">Himachal Pradesh</option>
+                                            <option value="JK">Jammu and Kashmir</option>
+                                            <option value="GA">Goa</option>
+                                            <option value="JH">Jharkhand</option>
+                                            <option value="KA">Karnataka</option>
+                                            <option value="KL">Kerala</option>
+                                            <option value="MP">Madhya Pradesh</option>
+                                            <option value="MH">Maharashtra</option>
+                                            <option value="MN">Manipur</option>
+                                            <option value="ML">Meghalaya</option>
+                                            <option value="MZ">Mizoram</option>
+                                            <option value="NL">Nagaland</option>
+                                            <option value="OR">Odisha</option>
+                                            <option value="PB">Punjab</option>
+                                            <option value="RJ">Rajasthan</option>
+                                            <option value="SK">Sikkim</option>
+                                            <option value="TN">Tamil Nadu</option>
+                                            <option value="TG">Telangana</option>
+                                            <option value="TR">Tripura</option>
+                                            <option value="UT">Uttarakhand</option>
+                                            <option value="UP">Uttar Pradesh</option>
+                                            <option value="WB">West Bengal</option>
+                                            <option value="AN">Andaman and Nicobar Islands</option>
+                                            <option value="CH">Chandigarh</option>
+                                            <option value="DN">Dadra and Nagar Haveli</option>
+                                            <option value="DD">Daman and Diu</option>
+                                            <option value="DL">Delhi</option>
+                                            <option value="LD">Lakshadweep</option>
+                                            <option value="PY">Puducherry</option>
+                                            <option value="NRI">Not residing in India</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="">Place of Residence</label>
+                                        <select name="Place" id="PersonalDetails_ResidenceData_Place">
+                                            <option value="None">Select</option>
+                                            <option value="Ur">Urban</option>
+                                            <option value="Ru">Rural</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id="PersonalDetails_ResidenceData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="">Nationality</label>
+                                        <select name="Nationality" id="PersonalDetails_ResidenceData_Nationality">
+                                            <option value="None">Select</option>
+                                            <option value="IN">Indian</option>
+                                            <option value="OCI">Overseas Citizen of India (OCI)</option>
+                                            <option value="FN">Foreign National</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="">Highest Qualification</label>
+                                        <select name="Qualification" id="PersonalDetails_ResidenceData_Qualification">
+                                            <option value="None">Select</option>
+                                            <option value="SSC">SSC/10th/Equivalent</option>
+                                            <option value="HSC">HSC/12th/Equivalent</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="Bachelors_3yr">Bachelors Degree (3 Year)</option>
+                                            <option value="Bachelors_4yr">Bachelors Degree (4 Year)</option>
+                                            <option value="Masters">Masters Degree</option>
+                                            <option value="Doctoral">Doctoral Degree</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <br>
+                    <br>
+                    <label for="IdentityVerification_ImageInfo">Candidate Image</label>
+                    <hr>
+                    <li id="IdentityVerification_ImageInfo" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="IdentityVerification_ImageInfo_Image">Upload your Image</label>
+                                        <input type="file" class="form_File" id="IdentityVerification_ImageInfo_Image" name="Image" accept=".jpeg, .png, .jpg" required>
+                                        <label for="IdentityVerification_ImageInfo_Image" class="formMessage_Visible">File Format: .jpeg, .jpg, .png<br>File Size: 2MB</label>
+                                        <label for="IdentityVerification_ImageInfo_Image" class="formMessage_Hidden">No File Uploaded</label>
+                                        <label for="IdentityVerification_ImageInfo_Image" class="formMessage_Hidden">File Size Exceed Limit</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <button  type="button" class="formFileUploadBtn" data-file="0">Upload</button>
+                                        <br>
+                                        <!-- <label for="IdentityVerification_ImageInfo_Image" class="formMessage_Visible">Uploading...</label> -->
+                                        <label for="IdentityVerification_ImageInfo_Image" class="formMessage_Success"></label>
+                                        <label for="IdentityVerification_ImageInfo_Image" class="formMessage_Hidden">File Not Uploaded, Try Again</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- <li id="PersonalDetails_AddressData" class="form_Subcomp">
+                        <div class="wrapper">
+                            <ul>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_AddressData_Current">Current Address</label>
+                                        <textarea id="PersonalDetails_AddressData_Current" name="Current Address" rows="5" required></textarea>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper">
+                                        <label for="PersonalDetails_AddressData_Permanent">Permanent Address</label>
+                                        <textarea id="PersonalDetails_AddressData_Permanent" name="Permanent Address" rows="5" required></textarea>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="form_Comp">
+                    <div class="wrapper">
+                        <ul>
+                            <li>
+                                <div class="wrapper">
+                                    <button type="submit" id="Form1_Submit" value="save">Submit</button>
+                                    <button type="reset"  id="Form1_Reset">Reset</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+       
+<!-- <script src="../../scripts/landing.js"></script> -->
+<!-- <script src="https://apis.google.com/js/api.js"></script> -->
+
+

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+
+:root {
+    /*----------------- Global -----------------*/
+    --palette1_Color1: #183c6c;
+    --palette1_Color2: #506BA0;
+    --palette1_Color3: #E4F0FF;
+    --palette1_Color4: #D7A31A;
+
+    --palette2_Color1: #183c6c;
+    --palette2_Color2: #4191F9;
+    --palette2_Color3: #F4F9FF;
+    --palette2_Color4: #FFF7D6;
+
+    --Color1: white;
+    --Color2: black; 
+    --Color3: #D7D7D7;
+    --Color4: #dbebf9;
+    --Color5: rgb(80,80,80);
+    --Color6: rgb(69,69,69);
+    
+    --fontColor1: white;
+    --fontColor2: black;
+    --borderRadius: 30px;
+    --Size1: clamp(5px, 0.5vw + 1px, 10px);
+    --fontSize: clamp(1rem, 1vw + .5rem, 1.5rem);
+    --contactNumberInput_Width: 35vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    list-style: none;
+    text-decoration: none;
+}
+    
+body {
+    display: grid;
+        height: 100vh;                  /* Backup Height */
+        height: 100svh;                 /* Main Height in small view port units */ 
+        width: auto;
+    background: var(--Color1);
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Open Sans", sans-serif;
+    color: var(--Color1);
+    overflow: hidden;
+}
+  
+.mainDiv {
+    display: grid;
+        height: 100%;
+        width: 100%;
+    /* background-color: red; */
+}
+
+.wrapper {
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+    overflow: hidden;
+    /* background-color: lightcyan; */
+}
+
+a {
+    color: var(--Color1);
+    cursor: pointer;
+}
+
+ul {
+    position: relative;
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+    overflow: hidden;
+    list-style-type: none;
+    isolation: isolate;
+}
+
+li {
+    display: grid;
+        height: 100%;
+        width: 100%;
+    place-items: center;
+}
+
+hr {
+    width: 100%;
+}
+
+/* body > .wrapper > ul{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 30px;
+} */
+
+body > .wrapper > ul {
+    display: flex;
+        height: 100%;
+        width: 100%;
+    flex-direction: column;
+}
+
+label {
+    padding-left: 5px;
+}
+
+button {
+        height: 35px;
+        width: 100px;
+    border: 1px solid var(--Color2);
+    /* border: 1px double transparent; */
+    /* background-image:  linear-gradient(white, white), linear-gradient(to right, var(--palette1_Color1), var(--palette1_Color2));
+    background-origin: border-box;
+    background-clip: content-box, border-box; */
+    background-color: var(--Color1);
+    border-radius: 5px;
+    margin: 1.6rem 0 0 10px;
+    font-size: 0.85rem!important;
+    font-weight: 400!important;
+}
+
+button:not([disabled]):hover {
+    border-color: var(--Color4);
+    box-shadow: 0 0 5px 2px var(--Color4);
+    transition: all .1s linear;
+    font-weight: 600!important;
+    color: var(--Color5);
+}
+
+button:not([disabled]):active {
+    font-weight: 400!important;
+}
+
+input, textarea, select {
+        height: 35px;
+        width: 97%;
+    align-self: flex-start;
+    border: 1px solid var(--Color2);
+    /* border-image-slice: 1; */
+    /* border: 1px double transparent; */
+    /* background-image:  repeating-linear-gradient(white, white), linear-gradient(to right, var(--palette1_Color1), var(--palette1_Color2)); */
+    /* background-origin: border-box; */
+    /* background-clip: content-box, border-box; */
+    border-radius: 5px;
+    font-size: .85rem;
+    font-weight: 400;
+    outline: none;
+    margin-left: 5px;
+    text-indent: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--Color4);
+    box-shadow: 0 0 2px 2px var(--Color4);
+}
+
+input[type="radio"] {
+    width: auto;
+    height: auto;
+    align-self: center;
+}
+
+input[type="radio"]:focus {
+    box-shadow: none;
+}
+
+input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+}
+
+input[type="checkbox"]:focus {
+/* box-shadow: none; */
+}
+
+textarea {
+    height: auto!important;
+    resize: none;
+}
+
+select {
+    min-width: max-content;
+    padding-right: 10px;
+}
+
+.logo {
+    display: flex;
+        height: 100%;
+        min-width: 198px;
+        width: 45vw;
+        max-width: 298px;
+        /* width: 298px; */
+    place-items: center;
+    border-right: 2px solid var(--Color3);
+}
+
+.logo > .wrapper > img {
+    width: 85%;
+    aspect-ratio: 13/2;
+}
+
+.contactNumberInput {
+    display: grid;
+        width: 100%;
+        grid-template-columns: .1fr 1fr;
+        grid-template-rows: 1fr;
+}
+
+.formButtonComp {
+    justify-content: end;
+    padding: 5px;
+}
+
+.formMessage_Visible {
+    color: red;
+    font-size: 0.75rem;
+}
+
+.formMessage_Hidden {
+    color: red;
+    visibility: hidden;
+    font-size: 0.75rem;
+}
+
+.formMessage_Success {
+    color: green;
+    visibility: hidden;
+    font-size: 1.25rem;
+}

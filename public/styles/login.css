@@ -1,0 +1,89 @@
+/* Media query needs to be placed below the property it is supposed to update otherwise no effect will be visible */
+@media only screen and (min-width: 200px) and (max-width: 860px)  {
+    :root {
+        
+    }
+}
+
+/*----------------------------- Header ----------------------------*/
+.header {
+    height: 65px;
+    background-color: var(--palette2_Color3);
+    border-bottom: var(--Color3) solid 2px;
+    box-shadow: var(--Color5) 0px 7px 20px 0px;
+}
+
+.header > .wrapper > ul {
+    display: flex;
+}
+
+/*----------------------------- Candidate Login ----------------------------*/
+
+.mainPage {
+        height: 100%;
+        width: 100%;
+}
+
+.mainPage > .wrapper > ul {
+    display: grid;
+        min-height: 300px;
+        height: 50%;
+        max-height: 500px;
+        min-width: 300px;
+        width: 50%;
+        max-width: 500px;
+    background-color: var(--palette2_Color3);
+    border-radius: 20px;
+    box-shadow: var(--Color5) 0px 7px 20px 0px;
+}
+
+.login_Heading {
+    text-align: center;
+    color: var(--Color5);
+    font-size: 2rem;
+    /* padding: 20px 0 0 0; */
+}
+
+.login_Main {
+    height: 100%;
+    width: 90%;
+    font-size: 1.25rem;
+    color: var(--Color5);
+    padding-bottom: 30px;
+}
+
+#Login_Form {
+        height: 100%;
+        width: 100%;
+}
+
+#Login_Form label {
+    justify-self: left;
+}
+
+/*----------------------------- Footer ----------------------------*/
+.footer {
+    height: 30px;
+}
+
+.footer > .wrapper > ul{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--palette1_Color1);
+}
+
+.footerComp > .wrapper{
+    display: flex;
+    justify-content: left;
+    font-size: 0.75rem;
+    padding:  0 0 0 10px;
+
+}
+
+.footerComp:nth-child(2) {
+    justify-content: right;
+}
+
+
+
+

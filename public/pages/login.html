@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Candidate Login Page</title>
+        <meta name="Candidate Login Page" content="Candidate Login Form">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/login.css">
+        <link rel="stylesheet" href="../styles/common.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+            <ul>
+                <li class="header">
+                    <div class="wrapper">
+                        <ul>
+                            <li class="logo" id="canLogin_Logo">
+                                <div class="wrapper">
+                                    <img src="../Assets/logo.png" alt="Blueocean International Logo" width="280px" height="auto">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mainPage">
+                    <div class="wrapper">
+                        <ul>
+                            <li class="login_Heading">
+                                <div class="wrapper">
+                                    Candidate Login Portal
+                                </div>
+                            </li>
+                            <li class="login_Main">
+                                <div class="wrapper">
+                                    <form id="Login_Form">
+                                        <div class="wrapper">
+                                            <ul>
+                                                <li>
+                                                    <div class="wrapper">
+                                                        <label for="canLogin_Username">Username</label>
+                                                        <input type="text" id="canLogin_Username" name="Candidate Login Username" placeholder="Enter Username" required>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrapper">
+                                                        <label for="canLogin_Password">Password</label>
+                                                        <input type="password" id="canLogin_Password" name="Candidate Login Password" placeholder="Enter Password" required>
+                                                    </div>
+                                                </li>
+                                                <li class="formMessage_Hidden">
+                                                    <div class="wrapper">
+                                                        <p>Wrong Username or Password</p>
+                                                    </div>
+                                                </li>
+                                                <li class="formMessage_Hidden">
+                                                    <div class="wrapper">
+                                                        <p>Bad Request</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="wrapper">
+                                                        <button type="submit">Login</button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer">
+                    <div class="wrapper">
+                        <ul>
+                            <li class="footerComp">
+                                <div class="wrapper">
+                                    <p>&copy 2024 Blueocean International India</p>
+                                </div>
+                            </li>
+                            <li class="footerComp">
+                                <div class="wrapper">
+                                    <p>Website by <a href="">Saarthak Batra</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="../scripts/login.js" type="module"></script>
+
+</body>
+</html>
